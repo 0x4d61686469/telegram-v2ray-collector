@@ -10,7 +10,7 @@ API_ID = os.environ.get("tel_API_ID")
 API_HASH = os.environ.get("tel_API_HASH")  
 SESSION_NAME = 'telegram_config_scraper'  
 OUTPUT_FILE = 'extracted_configs.txt'
-HOURS_LIMIT = 8
+HOURS_LIMIT = 12
 
 PROXY = (socks.SOCKS5, '127.0.0.1', 10808) 
 CONFIG_REGEX = r'(vless://[^\s]+|vmess://[^\s]+)'

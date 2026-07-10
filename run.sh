@@ -1,5 +1,6 @@
 #!/bin/bash
 
+cd /home/mahdi/bugbounty-tools/telegram-v2ray-collector
 # Name of the virtual environment directory
 VENV_DIR=".venv"
 
@@ -38,8 +39,6 @@ fi
 echo "Installing dependencies from requirements.txt..."
 pip install -r requirements.txt
 
-echo "------------------------------------------------"
-echo "Setup complete! Virtual environment is active."
-echo "To activate it manually in the future, run:"
-echo "source $VENV_DIR/bin/activate"
-echo "------------------------------------------------"
+
+
+source .venv/bin/activate && python3 app.py && git commit -a -m "update $(date '+%Y-%m-%d %H:%M:%S')" && git push
