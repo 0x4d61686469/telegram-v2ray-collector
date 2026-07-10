@@ -1,0 +1,3 @@
+telethon
+pysocks
+python-socks[asyncio]
