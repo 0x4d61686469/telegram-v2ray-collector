@@ -13,7 +13,7 @@ OUTPUT_FILE = 'extracted_configs.txt'
 HOURS_LIMIT = 12
 
 PROXY = (socks.SOCKS5, '127.0.0.1', 10808) 
-CONFIG_REGEX = r'(vless://[^\s]+|vmess://[^\s]+)'
+CONFIG_REGEX = r'(vless://[^\s]+|vmess://[^\s]+|trojan://[^\s]+)'
 
 async def main():
     client = TelegramClient(SESSION_NAME, API_ID, API_HASH, proxy=PROXY)
@@ -26,7 +26,7 @@ async def main():
     extracted_configs = set()
     
     # We will run global searches for both prefixes
-    search_queries = ['vless://', 'vmess://']
+    search_queries = ['vless://', 'vmess://', 'trojan://']
 
     for query in search_queries:
         print(f"Searching globally for query: '{query}'...")
